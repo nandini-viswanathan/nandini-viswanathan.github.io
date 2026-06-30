@@ -504,7 +504,8 @@
 
     .project-card:hover { background: var(--bg3); }
 
-    .project-card::after {
+    /* Arrow only on cards that are real links */
+    a.project-card::after {
       content: '↗';
       position: absolute;
       top: 2rem; right: 2rem;
@@ -513,7 +514,7 @@
       transition: color 0.25s, transform 0.25s;
     }
 
-    .project-card:hover::after { color: var(--gold); transform: translate(2px, -2px); }
+    a.project-card:hover::after { color: var(--gold); transform: translate(2px, -2px); }
 
     .project-number {
       font-family: var(--serif);
@@ -955,15 +956,15 @@
     </div>
     <div class="projects-grid">
 
-      <div class="project-card">
+      <a href="https://github.com/datumScience/bi_agent" target="_blank" rel="noopener" class="project-card">
         <div class="project-number">01</div>
-        <div class="project-title">Apple Intelligence Data Platform</div>
-        <p class="project-desc">Led evolution of enterprise data systems for next-gen conversational AI. Designed multi-layer data warehouse reducing compute costs by 27% and improving execution times by 75%.</p>
+        <div class="project-title">BI Agent</div>
+        <p class="project-desc">An autonomous business intelligence agent that runs analyses and produces insights on datasets using Claude models — combining agentic AI with data engineering workflows.</p>
         <div class="project-tags">
-          <span class="tag">Data Warehouse</span><span class="tag">Schema Governance</span>
-          <span class="tag">AI Measurement</span><span class="tag">Privacy</span>
+          <span class="tag">Python</span><span class="tag">Agentic AI</span>
+          <span class="tag">Claude</span><span class="tag">Data Analysis</span>
         </div>
-      </div>
+      </a>
 
       <div class="project-card">
         <div class="project-number">02</div>
